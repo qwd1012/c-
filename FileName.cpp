@@ -1,53 +1,32 @@
-//#include <stdio.h>
-//
-//void main()
-//{
-//	int a = 100;
-//
-//	while (a == 200)
-//	{
-//		printf("while¹® ³»ºÎ¿¡ µé¾î¿Ô½À´Ï´Ù.\n");
-//	}
-//
-//	do {
-//		printf("do~while¹® ³»ºÎ¿¡ µé¾î¿Ô½À´Ï´Ù.\n");
-//	} while (a == 200);
-//}
-
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//void main()
-//{
-//	int a, b;
-//
-//	while (1)
-//	{
-//		printf("´õÇÒ µÎ ¼ö ÀÔ·Â (¸ØÃß·Á¸é 0À» ÀÔ·Â) : ");
-//		scanf("%d %d", &a, &b);
-//
-//		if (a == 0)
-//			break;
-//
-//		printf("%d + %d = %d \n", a, b, a + b);
-//	}
-//
-//	printf("0À» ÀÔ·ÂÇØ¼­ for¹®À» Å»ÃâÇß½À´Ï´Ù.\n");
-//}
-
 #include <stdio.h>
-
-void main()
+int main()
 {
-	int hap = 0;
-	int i;
-
-	for (i = 1; i <= 100; i++)
-	{
-		if (i % 3 == 0)
-			continue;
-
-		hap += i;
+	int number;
+	int count = 1;
+	printf("ìˆ«ìž ìž…ë ¥: ");
+	scanf("%d", &number);
+	int ori=number;
+	while (1) {
+		if (number < 10)
+			break;
+		number /= 10;
+		count *= 10;
 	}
 
-	printf("1~100±îÁöÀÇ ÇÕ(3ÀÇ ¹è¼ö Á¦¿Ü): %d\n", hap);
+	while (count > 0) {
+		int share;
+		share = ori / count;
+		
+		int i = 0;
+		while (i < share * 2) {
+			printf("\u2665");
+			i++;
+		}
+		printf("\n");
+
+		ori %= count;
+		count /= 10;
+	}
+
+	return 0;
 }
