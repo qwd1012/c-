@@ -1,32 +1,41 @@
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int i;
+//	for (i = 0;i < 3;i++)
+//	{
+//		printf("안녕하세요?\n");
+//		printf("##또 안녕하세요?##\n");
+//	}
+//
+//	printf("\n\n");
+//
+//	for(i=0;i<3;i++)
+//		printf("안녕하세요?\n");
+//	printf("##또 안녕하세요?##\n");
+//
+//}
+//
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int i;
+//
+//	for (i = 5;i > 0;i--)
+//	{
+//		printf("%d : 안녕하세요? 빙글빙글 for문을 공부 중입니다.^^\n", i);
+//	}
+//}
+
 #include <stdio.h>
-int main()
+
+void main()
 {
-	int number;
-	int count = 1;
-	printf("숫자 입력: ");
-	scanf("%d", &number);
-	int ori=number;
-	while (1) {
-		if (number < 10)
-			break;
-		number /= 10;
-		count *= 10;
-	}
+	int hap;
 
-	while (count > 0) {
-		int share;
-		share = ori / count;
-		
-		int i = 0;
-		while (i < share * 2) {
-			printf("\u2665");
-			i++;
-		}
-		printf("\n");
+	hap = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
 
-		ori %= count;
-		count /= 10;
-	}
-
-	return 0;
+	printf("1에서 10까지의 합 : %d\n", hap);
 }
