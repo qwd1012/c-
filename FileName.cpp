@@ -1,41 +1,42 @@
 //#include <stdio.h>
-//
 //void main()
 //{
-//	int i;
+//	int i, k;
+//
 //	for (i = 0;i < 3;i++)
 //	{
-//		printf("안녕하세요?\n");
-//		printf("##또 안녕하세요?##\n");
+//		for (k = 0;k < 2;k++)
+//		{
+//			printf("중첩 for문입니다. (i값: %d, k값: %d)\n", i, k);
+//		}
 //	}
-//
-//	printf("\n\n");
-//
-//	for(i=0;i<3;i++)
-//		printf("안녕하세요?\n");
-//	printf("##또 안녕하세요?##\n");
-//
 //}
-//
+
 //#include <stdio.h>
-//
 //void main()
 //{
-//	int i;
+//	int i, k;
 //
-//	for (i = 5;i > 0;i--)
+//	for (i = 2;i <= 9;i++)
 //	{
-//		printf("%d : 안녕하세요? 빙글빙글 for문을 공부 중입니다.^^\n", i);
+//		for (k = 1;k <= 9;k++)
+//		{
+//			printf("%d * %d = %d \n", i, k, i * k);
+//		}
 //	}
 //}
 
 #include <stdio.h>
-
 void main()
 {
-	int hap;
+	int i, k;
 
-	hap = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
-
-	printf("1에서 10까지의 합 : %d\n", hap);
+	for (i = 1;i <= 9;i++)
+	{
+		for (k = 2;k <= 9;k++)
+		{
+			printf("%2dX%2d=%2d", k, i, i * k);
+		}
+		printf("\n");
+	}
 }
