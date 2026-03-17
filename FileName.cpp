@@ -1,101 +1,73 @@
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
+//#include <string.h>
 //void main()
 //{
-//	int coffee;
-//
-//	printf("¾î¶² Ä¿ÇÇ µå¸±±î¿ä? (1:º¸Åë, 2:¼³ÅÁ, 3:ºí·¢) ");
-//	scanf("%d", &coffee);
-//
-//	printf("\n# 1. ¶ß°Å¿î ¹°À» ÁØºñÇÑ´Ù\n");
-//	printf("# 2. Á¾ÀÌÄÅÀ» ÁØºñÇÑ´Ù\n");
-//
-//	switch (coffee)
+//	struct bibim
 //	{
-//	case 1:printf("# 3. º¸ÅëÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-//	case 2:printf("# 3. ¼³ÅÁÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-//	case 3:printf("# 3. ºí·¢Ä¿ÇÇ¸¦ Åº´Ù\n"); break;
-//	default:printf("# 3. ¾Æ¹«°Å³ª Åº´Ù\n"); break;
-//	}
+//		int a;
+//		float b;
+//		char c;
+//		char d[5];
+//	};
 //
-//	printf("# 4. ¹°À» º×´Â´Ù\n");
-//	printf("# 5. ½ºÇ¬À¸·Î Àú¾î¼­ ³ìÀÎ´Ù\n\n");
+//	struct bibim b1;
 //
-//	printf("¼Õ´Ô~ Ä¿ÇÇ ¿©±â ÀÖ½À´Ï´Ù.\n\n");
+//	b1.a = 10;
+//	b1.b = 1.1f;
+//	b1.c = 'A';
+//	strcpy(b1.d, "ABCD");
+//
+//	printf("b1.a ==> %d \n", b1.a);
+//	printf("b1.b ==> %f \n", b1.b);
+//	printf("b1.c ==> %c \n", b1.c);
+//	printf("b1.d ==> %s \n", b1.d);
 //}
 
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
-//int coffee_machine(int botton)
-//{
-//	printf("\n# 1. (ÀÚµ¿À¸·Î)¶ß°Å¿î ¹°À» ÁØºñÇÑ´Ù\n");
-//	printf("# 2. (ÀÚµ¿À¸·Î)Á¾ÀÌÄÅÀ» ÁØºñÇÑ´Ù\n");
-//
-//	switch (botton)
-//	{
-//	case 1:printf("# 3. (ÀÚµ¿À¸·Î)º¸ÅëÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-//	case 2:printf("# 3. (ÀÚµ¿À¸·Î)¼³ÅÁÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-//	case 3:printf("# 3. (ÀÚµ¿À¸·Î)ºí·¢Ä¿ÇÇ¸¦ Åº´Ù\n"); break;
-//	default:printf("# 3. (ÀÚµ¿À¸·Î)¾Æ¹«°Å³ª Åº´Ù\n"); break;
-//	}
-//
-//	printf("# 4. (ÀÚµ¿À¸·Î)¹°À» º×´Â´Ù\n");
-//	printf("# 5. (ÀÚµ¿À¸·Î)½ºÇ¬À¸·Î Àú¾î¼­ ³ìÀÎ´Ù\n\n");
-//
-//	return 0;
-//}
-//
 //void main()
 //{
-//	int coffee;
-//	int ret;
+//	struct student
+//	{
+//		char name[10];
+//		int kor;
+//		int eng;
+//		float avg;
+//	};
 //
-//	printf("¾î¶² Ä¿ÇÇ¸¦ µå¸±±î¿ä? (1:º¸Åë, 2:¼³ÅÁ, 3:ºí·¢) ");
-//	scanf("%d", &coffee);
+//	struct student s;
 //
-//	ret = coffee_machine(coffee);
+//	printf("ì´ë¦„ : ");
+//	scanf("%s", s.name, 9);
 //
-//	printf("¼Õ´Ô~ Ä¿ÇÇ ¿©±â ÀÖ½À´Ï´Ù.\n\n");
+//	printf("êµ­ì–´ ì ìˆ˜ : ");
+//	scanf("%d", &s.kor);
+//
+//	printf("ì˜ì–´ ì ìˆ˜ : ");
+//	scanf("%d", &s.eng);
+//
+//	s.avg = (s.kor + s.eng) / 2.0f;
+//
+//	printf("\n---êµ¬ì¡°ì²´ í™œìš©---\n");
+//	printf("í•™ìƒ ì´ë¦„ ==> %s\n", s.name);
+//	printf("êµ­ì–´ ì ìˆ˜ ==> %d\n", s.kor);
+//	printf("ì˜ì–´ ì ìˆ˜ ==> %d\n", s.eng);
+//	printf("í‰ê·  ì ìˆ˜ ==> %5.1f\n", s.avg);
 //}
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int coffee_machine(int botton)
-{
-	printf("\n# 1. (ÀÚµ¿À¸·Î)¶ß°Å¿î ¹°À» ÁØºñÇÑ´Ù\n");
-	printf("# 2. (ÀÚµ¿À¸·Î)Á¾ÀÌÄÅÀ» ÁØºñÇÑ´Ù\n");
-
-	switch (botton)
-	{
-	case 1:printf("# 3. (ÀÚµ¿À¸·Î)º¸ÅëÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-	case 2:printf("# 3. (ÀÚµ¿À¸·Î)¼³ÅÁÄ¿ÇÇ¸¦ Åº´Ù\n"); break;
-	case 3:printf("# 3. (ÀÚµ¿À¸·Î)ºí·¢Ä¿ÇÇ¸¦ Åº´Ù\n"); break;
-	default:printf("# 3. (ÀÚµ¿À¸·Î)¾Æ¹«°Å³ª Åº´Ù\n"); break;
-	}
-
-	printf("# 4. (ÀÚµ¿À¸·Î)¹°À» º×´Â´Ù\n");
-	printf("# 5. (ÀÚµ¿À¸·Î)½ºÇ¬À¸·Î Àú¾î¼­ ³ìÀÎ´Ù\n\n");
-
-	return 0;
-}
 
 void main()
 {
-	int coffee;
-	int ret;
+	enum week{sun,mon,tue,wed,thu,fri,sat};
 
-	printf("A´Ô ¾î¶² Ä¿ÇÇ µå¸±±î¿ä? (1:º¸Åë, 2:¼³ÅÁ, 3:ºí·¢) ");
-	scanf("%d", &coffee);
-	ret = coffee_machine(coffee);
-	printf("A´Ô Ä¿ÇÇ ¿©±â ÀÖ½À´Ï´Ù.\n\n");
+	enum week ww;
 
-	printf("B´Ô ¾î¶² Ä¿ÇÇ µå¸±±î¿ä? (1:º¸Åë, 2:¼³ÅÁ, 3:ºí·¢) ");
-	scanf("%d", &coffee);
-	ret = coffee_machine(coffee);
-	printf("B´Ô Ä¿ÇÇ ¿©±â ÀÖ½À´Ï´Ù.\n\n");
+	ww = sat;
 
-	printf("C´Ô ¾î¶² Ä¿ÇÇ µå¸±±î¿ä? (1:º¸Åë, 2:¼³ÅÁ, 3:ºí·¢) ");
-	scanf("%d", &coffee);
-	ret = coffee_machine(coffee);
-	printf("C´Ô Ä¿ÇÇ ¿©±â ÀÖ½À´Ï´Ù.\n\n");
+	if (ww == sat)
+		printf("ì˜¤ëŠ˜ì€ ì¼ìš”ì¼ì…ë‹ˆë‹¤.\n");
+	else
+		printf("ì˜¤ëŠ˜ì€ ì¼ìš”ì¼ì´ ì•„ë‹™ë‹ˆë‹¤.\n");
 }
