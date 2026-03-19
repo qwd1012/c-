@@ -1,73 +1,96 @@
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
-//#include <string.h>
+//
 //void main()
 //{
-//	struct bibim
-//	{
-//		int a;
-//		float b;
-//		char c;
-//		char d[5];
-//	};
+//    int a, b, c, d;
+//    int hap;
 //
-//	struct bibim b1;
+//    printf("1¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &a);
 //
-//	b1.a = 10;
-//	b1.b = 1.1f;
-//	b1.c = 'A';
-//	strcpy(b1.d, "ABCD");
+//    printf("2¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &b);
 //
-//	printf("b1.a ==> %d \n", b1.a);
-//	printf("b1.b ==> %f \n", b1.b);
-//	printf("b1.c ==> %c \n", b1.c);
-//	printf("b1.d ==> %s \n", b1.d);
+//    printf("3¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &c);
+//
+//    printf("4¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &d);
+//
+//    hap = a + b + c + d;
+//
+//    printf("ÇÕ°è ==> %d \n", hap);
 //}
 
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
+//
 //void main()
 //{
-//	struct student
-//	{
-//		char name[10];
-//		int kor;
-//		int eng;
-//		float avg;
-//	};
+//    int aa[4];
+//    int hap;
 //
-//	struct student s;
+//    printf("1¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &aa[0]);
 //
-//	printf("ì´ë¦„ : ");
-//	scanf("%s", s.name, 9);
+//    printf("2¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &aa[1]);
 //
-//	printf("êµ­ì–´ ì ìˆ˜ : ");
-//	scanf("%d", &s.kor);
+//    printf("3¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &aa[2]);
 //
-//	printf("ì˜ì–´ ì ìˆ˜ : ");
-//	scanf("%d", &s.eng);
+//    printf("4¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//    scanf("%d", &aa[3]);
 //
-//	s.avg = (s.kor + s.eng) / 2.0f;
+//    hap = aa[0] + aa[1] + aa[2] + aa[3];
 //
-//	printf("\n---êµ¬ì¡°ì²´ í™œìš©---\n");
-//	printf("í•™ìƒ ì´ë¦„ ==> %s\n", s.name);
-//	printf("êµ­ì–´ ì ìˆ˜ ==> %d\n", s.kor);
-//	printf("ì˜ì–´ ì ìˆ˜ ==> %d\n", s.eng);
-//	printf("í‰ê·  ì ìˆ˜ ==> %5.1f\n", s.avg);
+//    printf("ÇÕ°è ==> %d \n", hap);
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//    int aa[4];
+//    int hap = 0;
+//    int i;
+//
+//    for (i = 0; i <= 3; i++)
+//    {
+//        printf("%d¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ", i + 1);
+//        scanf("%d", &aa[i]);
+//    }
+//
+//    hap = aa[0] + aa[1] + aa[2] + aa[3];
+//
+//    printf("ÇÕ°è ==> %d \n", hap);
 //}
 
 #include <stdio.h>
 
 void main()
 {
-	enum week{sun,mon,tue,wed,thu,fri,sat};
+    int aa[4] = { 100, 200, 300, 400 };
+    int bb[] = { 100, 200, 300, 400 };
+    int cc[4] = { 100, 200 };
+    int dd[4] = { 0 };
+    int i;
 
-	enum week ww;
+    for (i = 0; i <= 3; i++)
+        printf("aa[%d]==>%d\t", i, aa[i]);
+    printf("\n");
 
-	ww = sat;
+    for (i = 0; i <= 3; i++)
+        printf("bb[%d]==>%d\t", i, bb[i]);
+    printf("\n");
 
-	if (ww == sat)
-		printf("ì˜¤ëŠ˜ì€ ì¼ìš”ì¼ì…ë‹ˆë‹¤.\n");
-	else
-		printf("ì˜¤ëŠ˜ì€ ì¼ìš”ì¼ì´ ì•„ë‹™ë‹ˆë‹¤.\n");
+    for (i = 0; i <= 3; i++)
+        printf("cc[%d]==>%d\t", i, cc[i]);
+    printf("\n");
+
+    for (i = 0; i <= 3; i++)
+        printf("dd[%d]==>%d\t", i, dd[i]);
+    printf("\n");
 }
