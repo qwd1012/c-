@@ -1,39 +1,96 @@
-//#include <stdio.h>
+#include <iostream>
+#include <string>
+using namespace std;
+
 //void main()
 //{
-//	int aa[100], bb[100];
-//	int i;
+//	string s = "Hello,World!";
 //
-//	for (i = 0;i < 100;i++)
-//	{
-//		aa[i] = i * 2;
-//	}
-//	for (i = 0;i < 100;i++)
-//	{
-//		bb[i] = aa[99 - i];
-//	}
-//	printf("bb[0]는 %d, bb[99]는 %d 입력됨\n", bb[0], bb[99]);
+//	cout << s.length() << endl;
+//	cout << s.empty() << endl;
+//
+//	s.clear();
+//	cout << s.empty() << endl;
 //}
 
-//#include <stdio.h>
 //void main()
 //{
-//	int aa[] = { 10,20,30,40,50 };
-//	int count;
-//	count = sizeof(aa) / sizeof(int);
-//	printf("배열 aa[]의 요소의 개수는 %d개 입니다\n",count);
+//	string s = "Hello, World!";
+//	cout << s.substr(7, 5) << endl;
+//
+//	s.append(" :)");
+//	s += "\n hi";
+//	cout << s << endl;
+//	s.insert(5, "??");
+//	cout << s << endl;
+//	printf("%s", s.c_str());
 //}
 
+//void main()
+//{
+//	string s = "Hello!";
+//	cout << s[0] << endl;
+//	cout << s.at(1) << endl;
+//	cout << s.front() << endl;
+//	cout << s.back() << endl;
+//}
 
-#include <stdio.h>
+//void main()
+//{
+//	string s = "example string";
+//	char search = 'e';
+//	int at = s.find(search, 0);
+//	cout << "'e' is at" << at << " " << endl;
+//	cout << s.rfind("e") << endl;
+//	if (s.rfind("xyz") == string::npos)
+//		cout << "없음" << endl;
+//}
+
+//void main()
+//{
+//	string s;
+//	cin >> s;
+//	cout << s.substr(7, 5) << endl;
+//	cout << s << endl;
+//
+//	s.insert(5, "??");
+//	cout << s << endl;
+//}
+
+//void main()
+//{
+//	string s = "Hello, World!";
+//	s.replace(7, 5, "C++");
+//	cout << s << endl;
+//	cout << s << endl;
+//}
+
+//void main()
+//{
+//	string s = "apple";
+//	cout << s.compare("apple") << endl;
+//	cout << s.compare("banana") << endl;
+//	cout << s.compare("aaa") << endl;
+//}
+
+//void main()
+//{
+//	string s = "42";
+//	int n = stoi(s);
+//	double d = stod("3.14");
+//	string t = to_string(n * 2);
+//	cout << n << " " << d << " " << t << endl;
+//}
+
 void main()
 {
-	char ss[8] = "Basic-C";
-	int i;
-	ss[5] = '#';
-	for (i = 0;i < 8;i++)
+	string s = "apple, banana, cherry";
+	string delim = ",";
+	size_t pos = 0;
+	while ((pos = s.find(delim))
+		!= string::npos)
 	{
-		printf("ss[%d] ==> %c\n", i, ss[i]);
+		cout << s.substr(0, pos) << " ";
+		s.erase(0, pos + delim.length());
 	}
-	printf("문자열 배열 ss ==> %s\n", ss);
 }
